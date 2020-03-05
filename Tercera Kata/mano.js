@@ -5,7 +5,7 @@ class Mano {
 		this.cartas = cartas;
 	}
 
-	ordenarCartas() {
+	ordenarCartas(params) {
 		params.sort(function(a, b) {
 			return b.ordenarCartas() - a.ordenarCartas();
 		});
