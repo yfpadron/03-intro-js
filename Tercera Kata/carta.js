@@ -1,4 +1,4 @@
-class Carta {
+export default class Carta {
 	//Constructor
 	constructor(valor, palo) {
 		if (this.validarValor(valor)) {
