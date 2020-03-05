@@ -1,17 +1,21 @@
 import Carta from "./carta.js";
 
-class Mano {
+export default class Mano {
 	constructor(cartas) {
 		this.cartas = cartas;
 	}
 
-	ordenarCartas(params) {
-		params.sort(function(a, b) {
-			return b.ordenarCartas() - a.ordenarCartas();
+	cartaMasAlta(cartas) {
+		cartas.sort(function(a, b) {
+			if (b.puntosCartas() > a.puntosCartas()) {
+				return 1;
+			} else if (b.puntosCartas() < a.puntosCartas()) {
+				return -1;
+			}
+			return 0;
 		});
+		return cartas;
 	}
-
-	cartaMasAlta(params) {}
 
 	parejas(params) {}
 
@@ -43,3 +47,7 @@ let cartas = [c1, c2, c3, c4, c5];
 let mano1 = new Mano(cartas);
 
 console.log(mano1);
+
+console.log(mano1.cartas);
+
+console.log(mano1.cartaMasAlta(mano1.cartas));
