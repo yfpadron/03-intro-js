@@ -35,7 +35,8 @@ class Carta {
 		return false;
 	}
 
-	puntuarCartas() {
+	//Asignando puntos a cada una de los valores de las cartas
+	puntosCartas() {
 		let dicCartaValor = {
 			2: 2,
 			3: 3,
@@ -54,12 +55,3 @@ class Carta {
 		return dicCartaValor[this.valor];
 	}
 }
-
-//Pruebas...
-let nuevacarta = new Carta("J", "S");
-let nuevacarta1 = new Carta(10, "S");
-let nuevacarta2 = new Carta(2, "I");
-let nuevacarta3 = new Carta(12, "I");
-
-console.log(nuevacarta.palo);
-console.log(nuevacarta.valor);
